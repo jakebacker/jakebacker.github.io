@@ -1,12 +1,29 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<script src="script.js"></script>
+	<!-- <script src="script.js"></script> -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/trianglify/0.4.0/trianglify.min.js"></script>
+	<script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+	<script src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+	<link href="hamburgers.min.css" rel="stylesheet">
+	<link href="balloon.min.css" rel="stylesheet">
 <title>
 TEMP
 </title>
 </head>
 <body>
-Temp
+<script>
+	$(document).ready(function(){
+		$("#testbutton1").click(function() {
+			$("#testbutton1").toggleClass("is-active");
+		})
+
+	})
+</script>
+<button class="hamburger hamburger--vortex" type="button" id="testbutton1" data-balloon="Test" data-balloon-pos="down">
+  <span class="hamburger-box">
+    <span class="hamburger-inner"></span>
+  </span>
+</button>
 
 </body>

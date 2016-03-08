@@ -1,2 +1,5 @@
-var superSecret = "Such Secret"
-document.cookie = "test1=such test; test2=17dnfv8na8i_f"
+$(document).ready(function(){
+    $("#testbutton1").onClick(function() {
+        $("#testbutton1").toggleClass("is-active");
+    })
+})
