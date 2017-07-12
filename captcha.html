@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<head>
+
+<title> reCAPTCHA test </title>
+<script src='https://www.google.com/recaptcha/api.js'></script>
+
+</head>
+
+<body>
+    <form action="?" method="POST">
+      <div class="g-recaptcha" data-sitekey="6LcS9yYUAAAAADsX9zlfnElm4PYdQvq9b5E3gKMf"></div>
+      <br/>
+      <input type="submit" value="Submit">
+    </form>
+    
+    <?php
+        require_once "recaptchalib.php";
+        
+        $str = "NkxjUzl5WVVBQUFBQUF5TTk1VDFUbkp2TEw0QjAyZjZsZlR0Y3ZKTw==";
+        $secret = base64_decode($str);
+        $response = null;
+        
+        $reCaptcha = new ReCaptcha($secret);
+        
+        if ($_POST["g-recaptcha-response"]) {
+                $response = $reCaptcha->verifyResponse(
+                $_SERVER["REMOTE_ADDR"],
+                $_POST["g-recaptcha-response"]
+            );
+        }
+        
+          if ($response != null && $response->success) {
+            echo "YAY";
+          }
+    ?>
+</body>
