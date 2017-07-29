@@ -1,0 +1,14 @@
+.center {
+	display: block;
+	margin: auto;
+	text-align: center;
+}
+
+body {
+	background-color: #f0f0f0;
+}
+
+.unlock-button {
+	display: none;
+	margin: 25px auto;
+}
