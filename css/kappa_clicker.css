@@ -12,3 +12,12 @@ body {
 	display: none;
 	margin: 25px auto;
 }
+
+.pad {
+	padding: 5px;
+}
+
+input.image-button {
+	padding-left: 32px;
+	height: 35px;
+}

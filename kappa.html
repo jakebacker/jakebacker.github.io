@@ -17,15 +17,24 @@
 
 <h1 class="center"> Kappa Clicker </h1>
 
-<img src="img/Kappa.png" alt="KAPPA" id="kp-click" class="center">
+<img src="img/kappa.png" alt="KAPPA" id="kp-click" class="center">
 
-<div id="point-text" class="center">
+<div id="point-text" class="center pad">
 0
 </div>
+<input type="submit" style="
+background: url('img/kappa-icon.png') no-repeat top left;"
+       class="center unlock-button image-button" value="Unlock 1 - 10" />
+<input type="submit" style="
+background: url('img/pogchamp-icon.png') no-repeat top left;"
+       class="center unlock-button image-button" value="Unlock 2 - 100" />
 
-<button class="center unlock-button">Unlock 1 - 10</button>
-<button class="center unlock-button">Unlock 2 - 100</button>
-<button class="center unlock-button">Unlock 3 - 1000</button>
+<button id="save-button" class="center">Save</button>
+
+<div class="center pad">
+    Load: <input id="load-text">
+    <button id="load-button">Load</button>
+</div>
 
 </body>
 </html>
