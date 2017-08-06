@@ -7,6 +7,27 @@ body {
     text-align: center;
 }
 
+.content {
+    padding: 0 10px;
+}
+
+ul.social-icons {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    text-align: center;
+}
+
+ul.social-icons li {
+    display: inline-block;
+}
+
+ul.social-icons li a img {
+    width: 32px;
+    height: auto;
+}
+
 ul.topnav {
     list-style-type: none;
     margin: 0;
