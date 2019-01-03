@@ -1,0 +1,56 @@
+==================================================================
+https://keybase.io/jakebacker44
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://jakebacker.com
+  * I am jakebacker44 (https://keybase.io/jakebacker44) on keybase.
+  * I have a public key ASDoQGN0WSuDfEcPG1WOgvRzEJYNL2fE5paPDI1n0dZx9go
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "0120e8406374592b837c470f1b558e82f47310960d2f67c4e6968f0c8d67d1d671f60a",
+      "host": "keybase.io",
+      "kid": "0120e8406374592b837c470f1b558e82f47310960d2f67c4e6968f0c8d67d1d671f60a",
+      "uid": "c15dec628b05a9396696d4507cde7319",
+      "username": "jakebacker44"
+    },
+    "merkle_root": {
+      "ctime": 1546547340,
+      "hash": "f3cf09b7695b3094a1938100f690ab38bc9ca3d0233dde8952c4665ec6fe41aeee27db7a49a4a098c3bfd1172efb4559a173479426b652839a986c4ed76241b8",
+      "hash_meta": "4a8defda309bcaff6f7e573dcad3448f114913966e6af8531620b582f3ddebb6",
+      "seqno": 4227310
+    },
+    "service": {
+      "entropy": "0TnlGu8aZo7qH+hvoc+7uDbd",
+      "hostname": "jakebacker.com",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 2
+  },
+  "client": {
+    "name": "keybase.io go client",
+    "version": "2.12.3"
+  },
+  "ctime": 1546547348,
+  "expire_in": 504576000,
+  "prev": "c2cf6128dd89bb49d5436eb074f46184b5223c09ee3bc0e0ce26fa5921125ebc",
+  "seqno": 7,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEg6EBjdFkrg3xHDxtVjoL0cxCWDS9nxOaWjwyNZ9HWcfYKp3BheWxvYWTESpcCB8Qgws9hKN2Ju0nVQ26wdPRhhLUiPAnuO8Dgzib6WSESXrzEILWqrSZ3/mx8h9uduqvCtuEKNBCHosRqi8aW4o0uwAJFAgHCo3NpZ8RAZczfs9FP4XKhgn++qVCgD4W9Y0WddgNbI6ODmBrAFtteSC105XIhO/eyFTuIB93F1rG8SQu5bRS8bWiiU/VMCqhzaWdfdHlwZSCkaGFzaIKkdHlwZQildmFsdWXEICCwUzCsSl4USaklOh9tcFb4xl0sRaa9P3B46T1+iK+Ao3RhZ80CAqd2ZXJzaW9uAQ==
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/jakebacker44
+
+==================================================================
