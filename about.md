@@ -4,12 +4,8 @@ title: About
 permalink: /about/
 ---
 
-Some information about you!
-
-### More Information
-
-A place to include any other types of information that you'd like to include about yourself.
+I am a student at Worcester Polytechnic Institute pursuing a Bachelor's and Master's degree in Computer Science with a focus on Cyber Security and a minor in Robotics Engineering.
 
 ### Contact me
 
-[email@domain.com](mailto:email@domain.com)
+[jbacker42@gmail.com](mailto:jbacker42@gmail.com)
