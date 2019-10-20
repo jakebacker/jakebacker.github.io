@@ -3,8 +3,6 @@ layout: post
 title: Vulnhub Kioptrix Level 1.1 (#2)
 ---
 
-## Vulnhub: Kioptrix: Level 1.1 (#2)
-
 This is my first writeup of a Vulnhub VM, so let's see how this goes...
 
 This writeup is for the Kioptrix: Level 1.1 (#2) found [here](https://www.vulnhub.com/entry/kioptrix-level-11-2,23/).
