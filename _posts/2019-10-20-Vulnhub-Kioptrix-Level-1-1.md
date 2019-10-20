@@ -1,7 +1,9 @@
 ---
 layout: post
-title: Vulnhub: Kioptrix 2
+title: Vulnhub Kioptrix 2
 ---
+
+## Vulnhub: Kioptrix: Level 1.1 (#2)
 
 This is my first writeup of a Vulnhub VM, so let's see how this goes...
 
