@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Test Title
+title: Vulnhub \- Kioptrix: Level 1.1 (#2)
 ---
 ## Vulnhub \- Kioptrix: Level 1.1 (#2)
 
