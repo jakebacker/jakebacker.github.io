@@ -49,13 +49,17 @@ I tested a few basic username and password combinations, but it didn't seem to d
 
 ![ZAP Results]({{ site.baseurl }}/images/KioptrixLevel1_1/zap.png "ZAP Results")
 
-I plugged the attack used (`ZAP' OR '1'='1' --`) into the username field and was presented with a form to ping a machine on the network. I immanently suspected there to be a bash injection vulnerability, but I plugged in an IP to make sure.
+I plugged the attack used (`ZAP' OR '1'='1' --`) into the username field and was presented with a form to ping a machine on the network. This works because there is an SQL query on the server that does not sanitize the input. The ' in the input terminates the previous string that the query is expecting. The next bit tells the query that if 1=1, also allow the user to proceed. The -- at the end just comments out the rest of the query.
 
-This brought me to a page containing the output to the ping command.
+I immediately suspected there to be a bash injection vulnerability, but I plugged in an IP to make sure. 
+
+This brought me to a page containing the output to the ping command. 
 
 ![ping results]({{ site.baseurl }}/images/KioptrixLevel1_1/ping.png "ping Results")
 
-I ran `; ls` to make sure that I could inject a command and was presented with a directory listing. Next, I injected a reverse shell by first opening a netcat listener on my Kali VM and then putting the shell code into the form.
+I ran `; ls` to make sure that I could inject a command and was presented with a directory listing. Here, the server is plugging in the contents of the input box into `ping <input>`. The semicolon terminates the ping command and runs whatever is after it.  
+
+Next, I injected a reverse shell by first opening a netcat listener on my Kali VM and then putting the shell code into the form.
 
 ```
 root@kali:~# nc -nvlp 1234
