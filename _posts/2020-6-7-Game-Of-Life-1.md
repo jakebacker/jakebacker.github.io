@@ -20,19 +20,19 @@ that are not are alive.
 
 This creates the following table:
 
-| Value 	| Current Status 	| Neighbors 	| Next Status 	|
-|:-----:	|:--------------:	|:---------:	|:-----------:	|
-|   0   	|      Dead      	|     0     	|     Dead    	|
-|   1   	|      Alive     	|     0     	|     Dead    	|
-|   2   	|      Dead      	|     1     	|     Dead    	|
-|   3   	|      Alive     	|     1     	|     Dead    	|
-|   4   	|      Dead      	|     2     	|     Dead    	|
-|   5   	|      Alive     	|     2     	|    Alive    	|
-|   6   	|      Dead      	|     3     	|    Alive    	|
-|   7   	|      Alive     	|     3     	|    Alive    	|
-|   8   	|      Dead      	|     4     	|     Dead    	|
-|   9   	|      Alive     	|     4     	|     Dead    	|
-|  ...  	|       ...      	|    ...    	|     ...     	|
+| Value  	 | Current Status 	 | Neighbors 	 | Next Status 	|
+|:-----:	 |:--------------:	 |:---------:	 |:-----------:	|
+|   0   	 |      Dead      	 |     0     	 |     Dead    	|
+|   1   	 |      Alive     	 |     0     	 |     Dead    	|
+|   2   	 |      Dead      	 |     1     	 |     Dead    	|
+|   3   	 |      Alive     	 |     1     	 |     Dead    	|
+|   4   	 |      Dead      	 |     2     	 |     Dead    	|
+|   5   	 |      Alive     	 |     2     	 |    Alive    	|
+|   6   	 |      Dead      	 |     3     	 |    Alive    	|
+|   7   	 |      Alive     	 |     3     	 |    Alive    	|
+|   8   	 |      Dead      	 |     4     	 |     Dead    	|
+|   9   	 |      Alive     	 |     4     	 |     Dead    	|
+|  ...  	 |       ...      	 |    ...    	 |     ...     	|
 
 Based off this, the only numbers that I need to worry about are values 5, 6, and 7. If the cell contains any of these values,
 it must be set to alive for the next iteration. Otherwise, it should be marked as dead.
