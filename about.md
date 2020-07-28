@@ -4,7 +4,7 @@ title: About
 permalink: /about/
 ---
 
-I am a student at Worcester Polytechnic Institute pursuing a Bachelor's and Master's degree in Computer Science with a focus on Cyber Security.
+I am a student at Worcester Polytechnic Institute pursuing a Bachelor's degree in Computer Science.
 
 ### Contact me
 
